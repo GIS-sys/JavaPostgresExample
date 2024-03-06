@@ -28,4 +28,10 @@ sudo -u postgres psql -d testdb
 
 3) use curl to try requests:
 
-???
+```bash
+curl -i -X GET http://localhost:8080/api/tutorials
+curl -i -X POST http://localhost:8080/api/tutorials -H "Content-Type: application/json" -d '{"title": "a", "description": "b"}'
+curl -i -X GET http://localhost:8080/api/tutorials
+curl -i -X PUT http://localhost:8080/api/tutorials/1 -H "Content-Type: application/json" -d '{"title": "a", "description": "b", "published": true}'
+curl -i -X GET http://localhost:8080/api/tutorials
+```

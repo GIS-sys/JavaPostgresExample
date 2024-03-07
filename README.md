@@ -24,7 +24,10 @@ sudo -u postgres psql -d testdb
 \c "host=localhost port=5432 dbname=testdb user=testuser password=testpass
 ```
 
-2) run: ./mvnw spring-boot:run
+2) export env variables and run:
+```bash
+DB_NAME=testdb DB_USER=testuser DB_PASS=testpass DB_HOST=localhost DB_PORT=5432 SERVER_PORT=8080 ./mvnw spring-boot:run
+```
 
 3) use curl to try requests:
 
